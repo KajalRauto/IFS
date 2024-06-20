@@ -30,7 +30,6 @@ function SignUp() {
     e.preventDefault();
     var result = clientlist.find(val => val.Email === userEmail.current.value)
     const goback = () => {
-      console.log(userEmail.current.value + " registered in successfully")
       toast.success(userEmail.current.value + " registered in successfully")
       setTimeout(() => {
         sessionStorage.status = true
@@ -43,7 +42,6 @@ function SignUp() {
       toast.error("Enter valid email address(abc@po.in)");
     } else if (!/^(?=.*?[A-Za-z])(?=.*?[0-9]).{8,}$/.test(userPassword.current.value)) {
       toast.error("Enter a strong password");
-      // 8 characters + alphanumeric 
     } else if (result) {
       toast.error("Username or email is already registered");
     } else {

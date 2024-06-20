@@ -1,81 +1,27 @@
 {
   "clients": [
     {
-      "id": "5f75",
-      "Email": "jaisriganesh@gmail.com",
-      "Password": "JaiSriGanesh@12345",
+      "id": "ff10",
+      "Name": "Ganesh Ji",
+      "Email": "JaiSriGanesh@gmail.com",
+      "Password": "Ganesh@123",
       "cartItem": [
         {
-          "id": "39",
-          "title": "Round Coffee Table",
-          "description": "Round coffee table with wooden base and marble top.",
-          "price": 4990,
-          "category": "Table",
-          "image": "table2.jpg",
+          "id": "37",
+          "title": "Modern Office Chair",
+          "description": "Adjustable office chair with mesh backrest and ergonomic design.",
+          "price": 3990,
+          "category": "Chair",
+          "image": "chair7.jpg",
           "offeredPrice": "NA",
           "wishlist": false,
           "count": 2
-        },
-        {
-          "id": "41",
-          "title": "Farmhouse Dining Table",
-          "description": "Rustic farmhouse dining table with distressed finish.",
-          "price": 10990,
-          "category": "Table",
-          "image": "table4.jpg",
-          "offeredPrice": "NA",
-          "wishlist": false,
-          "count": 1
-        },
-        {
-          "id": "40",
-          "title": "Extendable Dining Table",
-          "description": "Wooden dining table with extension leaf for extra seating.",
-          "price": 12990,
-          "category": "Table",
-          "image": "table3.jpg",
-          "offeredPrice": 11990,
-          "wishlist": false,
-          "count": 1
         }
       ],
       "wishListItem": [],
-      "total": 33960,
-      "taxes": 0,
-      "estimatedTotal": 0
-    },
-    {
-      "id": "6f96",
-      "Email": "test@gmail.com",
-      "Password": "Test@123",
-      "cartItem": [
-        {
-          "id": "43",
-          "title": "Industrial Bar Table",
-          "description": "Bar-height table with reclaimed wood top and metal legs.",
-          "price": 6990,
-          "category": "Table",
-          "image": "table6.jpg",
-          "offeredPrice": "NA",
-          "wishlist": false,
-          "count": 3
-        },
-        {
-          "id": "44",
-          "title": "Nesting Side Tables",
-          "description": "Set of nesting side tables with glass tops and metal frames.",
-          "price": 2490,
-          "category": "Table",
-          "image": "table7.jpg",
-          "offeredPrice": 1990,
-          "wishlist": false,
-          "count": 1
-        }
-      ],
-      "wishListItem": [],
-      "total": 23460,
-      "taxes": "4222.80",
-      "estimatedTotal": "234604222.80"
+      "total": 7980,
+      "taxes": "1436.40",
+      "estimatedTotal": "11416.40"
     }
   ],
   "categories": [

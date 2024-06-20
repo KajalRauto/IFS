@@ -26,15 +26,12 @@ function Header() {
           </a>
         </div>
 
-        <div className="col-md-6 text-end"> {/* Adjusted column width to accommodate icons */}
+        <div className="col-md-6 text-end">
           <div className="d-flex align-items-center justify-content-end">
-            {/* <button type="button" className="btn me-3"> 
-              <img src={require("../Resources/wishlist.png")} className="card-img-top" alt="..." style={{ width: "30px" }} />
-            </button> */}
-            <Link className="btn me-3" to="/wishlist"> {/* Added margin class 'me-3' for spacing between buttons */}
+            <Link className="btn me-3" to="/wishlist">
               <img src={require("../Resources/wishlist.png")} alt="..." style={{ width: "30px" }} />
             </Link>
-            <Link className="btn me-3" to="/cart"> {/* Added margin class 'me-3' for spacing between buttons */}
+            <Link className="btn me-3" to="/cart">
               <img src={require("../Resources/cart.png")} alt="..." style={{ width: "30px" }} />
             </Link>
             {(status === "undefined" || status === undefined) ? (

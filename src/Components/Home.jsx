@@ -1,7 +1,5 @@
-// import banner1 from '../Resources/banner1.avif'
-// import banner2 from '../Resources/banner2.avif'
-// import banner3 from '../Resources/banner3.avif'
-// import banner4 from '../Resources/banner4.jpg'
+import { Link } from "react-router-dom";
+
 function Home() {
   return (
     <div className="container">
@@ -18,7 +16,7 @@ function Home() {
               <div className="carousel-caption text-start d-none d-md-block">
                 <h1>Example headline.</h1>
                 <p className="opacity-75">Some representative placeholder content for the first slide of the carousel.</p>
-                <p><a className="btn btn-lg btn-danger" href="#">Shop Now</a></p>
+                <Link to="/products" state="Offers" className="btn btn-lg btn-danger">Shop Now</Link>
               </div>
             </div>
           </div>
@@ -28,7 +26,7 @@ function Home() {
               <div className="carousel-caption d-none d-md-block">
                 <h1>Another example headline.</h1>
                 <p>Some representative placeholder content for the second slide of the carousel.</p>
-                <p><a className="btn btn-lg btn-danger" href="#">Shop Now</a></p>
+                <Link to="/products" state="Offers" className="btn btn-lg btn-danger">Shop Now</Link>
               </div>
             </div>
           </div>
@@ -38,7 +36,7 @@ function Home() {
               <div className="carousel-caption text-end d-none d-md-block">
                 <h1>One more for good measure.</h1>
                 <p>Some representative placeholder content for the third slide of this carousel.</p>
-                <p><a className="btn btn-lg btn-danger" href="#">Shop Now</a></p>
+                <Link to="/products" state="Offers" className="btn btn-lg btn-danger">Shop Now</Link>
               </div>
             </div>
           </div>

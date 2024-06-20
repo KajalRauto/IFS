@@ -6,18 +6,6 @@ import 'react-toastify/dist/ReactToastify.css';
 
 function Login() {
   const { setCartItemsList } = useContext(StoreList)
-
-
-
-  //begin
-  // const setCartItems = (allDet) => {
-  //   if (sessionStorage.status) {
-  //     const concernedUser = allDet.find((val) => val.Email === sessionStorage.email);
-  //     console.log(sessionStorage.email, concernedUser, "checking")
-  //     // setCartItemsList(concernedUser.cartItem);
-  //   }
-  // };
-  //endshere
   const userEmail = useRef();
   const userPassword = useRef();
 
@@ -29,18 +17,15 @@ function Login() {
   const url = `${devEnv ? REACT_APP_DEV_URL_C : REACT_APP_PROD_URL_C}`;
 
   const getClientlist = () => {
-    console.log("inside login effect call")
     fetch(url)
       .then((response) => response.json())
       .then((allClient) => setclientlist(allClient));
   };
   useEffect(() => {
     getClientlist();
-    console.log("hi i am inside login effect")
   }, [true]);
 
   const goback = () => {
-    console.log(userEmail.current.value + " logged in successfully")
     toast.success(userEmail.current.value + " logged in successfully")
     setTimeout(() => {
       sessionStorage.status = true
@@ -54,13 +39,10 @@ function Login() {
     const verified = clientlist.find((val) => val.Email === userEmail.current.value && val.Password == userPassword.current.value)
 
     if (verified) {
-      console.log("inside last if")
-      console.log(verified.cartItem, "kajal check here")
       setCartItemsList(verified.cartItem)
       goback()
     } else {
       toast.error("Email and Password does not match")
-      console.log("not verified")
     }
   }
 

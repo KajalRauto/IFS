@@ -15,7 +15,6 @@ function Wishlist() {
   const url = `${devEnv ? REACT_APP_DEV_URL_C : REACT_APP_PROD_URL_C}`;
 
   const getUsers = () => {
-    console.log(wishlistItems, "check it here")
     if (sessionStorage.email !== "" && sessionStorage.email !== undefined && sessionStorage.email !== "undefined") {
       fetch(url)
         .then((response) => response.json())
@@ -29,18 +28,14 @@ function Wishlist() {
   };
   useEffect(() => {
     getUsers();
-    console.log("hi i m inside cart useeffect")
   }, []);
   const moveToCart = (item) => {
     const existingCartItems = userDetails.cartItem;
     if (existingCartItems.length > 0) {
-      console.log("102", "item.id")
       const existingItemIndex = userDetails.cartItem.findIndex(cartItem => cartItem.id === item.id);
       if (existingItemIndex !== -1) {
         userDetails.cartItem[existingItemIndex].count++;
-        console.log("103")
       } else {
-        console.log("104")
         item.count = 1;
         userDetails.cartItem.push(item);
       }
@@ -50,11 +45,11 @@ function Wishlist() {
     }
     const selectedItemIndex = userDetails.wishListItem.findIndex(wishListItem => wishListItem.id === item.id);
     userDetails.wishListItem.splice(selectedItemIndex, 1);
-    console.log("106")
     userDetails.total += item.price;
-    userDetails.taxes = Number(0.18 * userDetails.total).toFixed(2);
-    userDetails.estimatedTotal = userDetails.total + userDetails.taxes
-    console.log(userDetails.total, "total added")
+    userDetails.taxes = (0.18 * userDetails.total).toFixed(2);
+    userDetails.taxes = (userDetails.taxes.indexOf('.') !== -1 && userDetails.taxes.split('.')[1].length === 1) ? userDetails.taxes + '0' : userDetails.taxes;
+    userDetails.estimatedTotal = String(userDetails.total + Number(userDetails.taxes) + 2000);
+    userDetails.estimatedTotal = (userDetails.estimatedTotal.indexOf('.') !== -1 && userDetails.estimatedTotal.split('.')[1].length === 1) ? userDetails.estimatedTotal + '0' : userDetails.estimatedTotal;
     toast("1 item got added")
 
     axios

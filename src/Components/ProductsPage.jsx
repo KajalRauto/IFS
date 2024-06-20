@@ -21,7 +21,6 @@ function ProductsPage() {
   const urlUsers = `${devEnv ? REACT_APP_DEV_URL_C : REACT_APP_PROD_URL_C}`;
 
   const getDet = () => {
-    console.log("hi kajal here")
     fetch(urlDet)
       .then((response) => response.json())
       .then((allDet) => saveProductsList(allDet));
@@ -36,7 +35,6 @@ function ProductsPage() {
   useEffect(() => {
     getUsers();
     getDet();
-    console.log("inside first useefeect");
   }, []);
 
   const location = useLocation();
@@ -55,20 +53,16 @@ function ProductsPage() {
       }
     }
     details = cdetails;
-    console.log(details, "inside listofwishlisteditems")
     setRequiredData(cdetails);
   };
   const saveProductsList = (allDet) => {
 
-    console.log("inside second use effect", allDet, userDetails);
 
     if (location.state == "Offers") {
       details = allDet.filter((item) => item.offeredPrice !== "NA")
-      console.log(details, "inside saveproducts list1")
       setRequiredData(allDet.filter((item) => item.offeredPrice !== "NA"));
     } else {
       details = allDet.filter((item) => item.category == location.state)
-      console.log(details, "inside saveproducts list2")
       setRequiredData(allDet.filter((item) => item.category == location.state));
     }
     setAllOfferProducts(allDet);
@@ -85,46 +79,35 @@ function ProductsPage() {
     }
   };
   const addToCart = (item) => {
-    console.log(details, "details inside addtocart")
-    console.log(sessionStorage.email, "10000")
-    console.log("100")
     if (sessionStorage.email !== "" && sessionStorage.email !== undefined && sessionStorage.email !== "undefined") {
-      console.log("101")
       const concernedUser = userDetails.find((val) => val.Email === sessionStorage.email);
-      console.log("7");
-      console.log(sessionStorage.email, "hi", concernedUser, "concernedUser");
       const existingCartItems = concernedUser.cartItem;
       if (existingCartItems.length > 0) {
-        console.log("102", "item.id")
         const existingItemIndex = concernedUser.cartItem.findIndex(cartItem => cartItem.id === item.id);
 
         if (existingItemIndex !== -1) {
           concernedUser.cartItem[existingItemIndex].count++;
-          console.log("103")
         } else {
-          console.log("104")
           item.count = 1;
           concernedUser.cartItem.push(item);
         }
 
       } else {
-        console.log("105")
         item.count = 1;
         concernedUser.cartItem = [item];
       }
       toast('1 Item got added to cart');
-      console.log("106")
       concernedUser.total += item.price;
-      concernedUser.taxes = Number(0.18 * concernedUser.total).toFixed(2);
-      concernedUser.estimatedTotal = concernedUser.total + concernedUser.taxes
-      console.log(concernedUser.total, "total added")
+      concernedUser.taxes = (0.18 * concernedUser.total).toFixed(2);
+      concernedUser.taxes = (concernedUser.taxes.indexOf('.') !== -1 && concernedUser.taxes.split('.')[1].length === 1) ? concernedUser.taxes + '0' : concernedUser.taxes;
+      concernedUser.estimatedTotal = String(concernedUser.total + Number(concernedUser.taxes) + 2000);
+      concernedUser.estimatedTotal = (concernedUser.estimatedTotal.indexOf('.') !== -1 && concernedUser.estimatedTotal.split('.')[1].length === 1) ? concernedUser.estimatedTotal + '0' : concernedUser.estimatedTotal;
 
       axios
         .put(`${devEnv ? REACT_APP_DEV_URL_C : REACT_APP_PROD_URL_C}/${concernedUser.id}`, concernedUser)
         .then((response) => setCartItemsList(response.data.cartItem))
     } else {
       toast('Please SignUp /  Login');
-      console.log("alert message please login / sign in")
     }
   }
   const addToWishlist = (item, data) => {
@@ -138,57 +121,39 @@ function ProductsPage() {
         if (existingItemIndex !== -1) {
           console.log("it is already wishlisted")
         } else {
-          console.log("it got wishlisted")
           concernedUser.wishListItem.push(item);
         }
 
       } else {
-        console.log("the first itemthat got wishlisted")
         concernedUser.wishListItem.push(item);
       }
-      // for (let i = 0; i < data.length; i++) {
-      //   if (data[i].id == item.id) {
-      //     data[i].wishlist = true
-      //   }
-      // }
       const newData = data.map(dataItem => {
         if (dataItem.id === item.id) {
           return { ...dataItem, wishlist: true };
         }
         return dataItem;
       });
-      console.log(newData, "details inside add to wishlist");
       setRequiredData(newData)
 
       axios
         .put(`${devEnv ? REACT_APP_DEV_URL_C : REACT_APP_PROD_URL_C}/${concernedUser.id}`, concernedUser)
-      // .then((response) => setRequiredData(details))
     } else {
       toast("Please SignUp /  Login")
-      console.log("alert message please login / sign in")
     }
   };
   const removeFromWishlist = (item, data) => {
-    console.log(data, "inside remove from wishlist")
     const concernedUser = userDetails.find((val) => val.Email === sessionStorage.email);
     const existingItemIndex = concernedUser.wishListItem.findIndex(wishListItem => wishListItem.id === item.id);
     concernedUser.wishListItem.splice(existingItemIndex, 1);
-    // for (let i = 0; i < data.length; i++) {
-    //   if (data[i].id == item.id) {
-    //     data[i].wishlist = false
-    //   }
-    // }
     const newData = data.map(dataItem => {
       if (dataItem.id === item.id) {
         return { ...dataItem, wishlist: false };
       }
       return dataItem;
     });
-    console.log(newData, "details inside remove from wishlist");
     setRequiredData(newData)
     axios
       .put(`${devEnv ? REACT_APP_DEV_URL_C : REACT_APP_PROD_URL_C}/${concernedUser.id}`, concernedUser)
-    // .then((response) => setRequiredData(details))
   };
   return <div className="container productsPage my-4">
     <ToastContainer />

@@ -6,14 +6,12 @@ import { Link } from "react-router-dom";
 function Cart() {
   const [cartItemsList, setCartItemsList] = useState([]);
   const [userDetails, setUserDetails] = useState([]);
-  // const [subtotal, setSubTotal] = useState(0);
 
   const devEnv = process.env.NODE_ENV !== "production";
   const { REACT_APP_DEV_URL_C, REACT_APP_PROD_URL_C } = process.env;
 
   const url = `${devEnv ? REACT_APP_DEV_URL_C : REACT_APP_PROD_URL_C}`;
   const getUsers = () => {
-    console.log(cartItemsList, "check it here")
     if (sessionStorage.email !== "" && sessionStorage.email !== undefined && sessionStorage.email !== "undefined") {
       fetch(url)
         .then((response) => response.json())
@@ -22,39 +20,26 @@ function Cart() {
           setUserDetails(concernedUser)
           setCartItemsList(concernedUser.cartItem)
         }
-          // if (sessionStorage.email !== "" && sessionStorage.email !== undefined && sessionStorage.email !== "undefined") {
-          //   const concernedUser = userDetails.find((val) => val.Email === sessionStorage.email);
-          //   const calculatedTotal = concernedUser.cartItem.reduce((total, item) => total + (item.price * item.count), 0);
-          //   setSubTotal(calculatedTotal)
-
         )
     }
   };
   useEffect(() => {
     getUsers();
-    console.log("hi i m inside cart useeffect")
   }, [true]);
 
   const incrementFunc = (item) => {
-    console.log(sessionStorage.email, "30")
-    console.log(userDetails, "33")
-    // const concernedUser = userDetails.find((val) => val.Email === sessionStorage.email);
-    // console.log(concernedUser, "31")
     const existingItemIndex = userDetails.cartItem.findIndex(cartItem => cartItem.id === item.id);
-    console.log(existingItemIndex, "32")
     userDetails.cartItem[existingItemIndex].count++;
-    console.log(userDetails.cartItem[existingItemIndex].count)
-    console.log(userDetails)
     userDetails.total += item.price;
-    userDetails.taxes = Number(0.18 * userDetails.total).toFixed(2);
-    userDetails.estimatedTotal = userDetails.total + userDetails.taxes
-    console.log(userDetails.total, "total added inside increment function")
+    userDetails.taxes = (0.18 * userDetails.total).toFixed(2);
+    userDetails.taxes = (userDetails.taxes.indexOf('.') !== -1 && userDetails.taxes.split('.')[1].length === 1) ? userDetails.taxes + '0' : userDetails.taxes;
+    userDetails.estimatedTotal = String(userDetails.total + Number(userDetails.taxes) + 2000);
+    userDetails.estimatedTotal = (userDetails.estimatedTotal.indexOf('.') !== -1 && userDetails.estimatedTotal.split('.')[1].length === 1) ? userDetails.estimatedTotal + '0' : userDetails.estimatedTotal;
     axios
       .put(`${devEnv ? REACT_APP_DEV_URL_C : REACT_APP_PROD_URL_C}/${userDetails.id}`, userDetails)
       .then((response) => setCartItemsList(response.data.cartItem))
   };
   const decrementFunc = (item) => {
-    // const concernedUser = userDetails.find((val) => val.Email === sessionStorage.email);
     const existingItemIndex = userDetails.cartItem.findIndex(cartItem => cartItem.id === item.id);
     if (userDetails.cartItem[existingItemIndex].count == 1) {
       userDetails.cartItem.splice(existingItemIndex, 1);
@@ -62,9 +47,10 @@ function Cart() {
       userDetails.cartItem[existingItemIndex].count--;
     }
     userDetails.total -= item.price;
-    userDetails.taxes = Number(0.18 * userDetails.total).toFixed(2);
-    userDetails.estimatedTotal = userDetails.total + userDetails.taxes
-    console.log(userDetails.total, "total added inside decrement function")
+    userDetails.taxes = (0.18 * userDetails.total).toFixed(2);
+    userDetails.taxes = (userDetails.taxes.indexOf('.') !== -1 && userDetails.taxes.split('.')[1].length === 1) ? userDetails.taxes + '0' : userDetails.taxes;
+    userDetails.estimatedTotal = String(userDetails.total + userDetails.taxes + 2000);
+    userDetails.estimatedTotal = Number((userDetails.estimatedTotal.indexOf('.') !== -1 && userDetails.estimatedTotal.split('.')[1].length === 1) ? userDetails.estimatedTotal + '0' : userDetails.estimatedTotal);
     axios
       .put(`${devEnv ? REACT_APP_DEV_URL_C : REACT_APP_PROD_URL_C}/${userDetails.id}`, userDetails)
       .then((response) => setCartItemsList(response.data.cartItem))
