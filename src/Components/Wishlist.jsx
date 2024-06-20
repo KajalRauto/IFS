@@ -52,6 +52,8 @@ function Wishlist() {
     userDetails.wishListItem.splice(selectedItemIndex, 1);
     console.log("106")
     userDetails.total += item.price;
+    userDetails.taxes = Number(0.18 * userDetails.total).toFixed(2);
+    userDetails.estimatedTotal = userDetails.total + userDetails.taxes
     console.log(userDetails.total, "total added")
     toast("1 item got added")
 

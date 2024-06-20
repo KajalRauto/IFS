@@ -1,16 +1,45 @@
+.carousel {
+  .carousel-inner {
+    .carousel-item {
+      height: 650px;
+
+
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .carousel {
+    .carousel-inner {
+      .carousel-item {
+        height: 630px;
+      }
+    }
+  }
+}
+
+@media (min-width: 376px) and (max-width: 768px) {
+  .carousel {
+    .carousel-inner {
+      .carousel-item {
+        height: 464px;
+      }
+    }
+  }
+}
+
+@media (max-width: 376px) {
+  .carousel {
+    .carousel-inner {
+      .carousel-item {
+        height: 234px;
+      }
+    }
+  }
+}
+
 .productsPage {
   .products {
-    /* .row {
-      display: flex;
-      flex-wrap: wrap;
-    } */
-
-    /* .col-lg-3 {
-      display: flex;
-      flex: 1 0 21%;
-      margin-bottom: 1rem;
-    } */
-
     .card {
       display: flex;
       flex-direction: column;
@@ -19,16 +48,6 @@
       height: 100%;
     }
 
-    /* .card-body {
-      display: flex;
-      flex-direction: column;
-      flex-grow: 1;
-    }
-
-    .card-body .card-text {
-      flex-grow: 1;
-    } */
-
     .card-footer {
       display: flex;
       justify-content: space-between;
@@ -36,11 +55,5 @@
       margin-top: auto;
       /* Pushes the footer to the bottom */
     }
-
-    /* .card-img-top {
-      height: auto;
-      max-width: 100%;
-      object-fit: cover;
-    } */
   }
 }

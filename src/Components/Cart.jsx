@@ -46,6 +46,8 @@ function Cart() {
     console.log(userDetails.cartItem[existingItemIndex].count)
     console.log(userDetails)
     userDetails.total += item.price;
+    userDetails.taxes = Number(0.18 * userDetails.total).toFixed(2);
+    userDetails.estimatedTotal = userDetails.total + userDetails.taxes
     console.log(userDetails.total, "total added inside increment function")
     axios
       .put(`${devEnv ? REACT_APP_DEV_URL_C : REACT_APP_PROD_URL_C}/${userDetails.id}`, userDetails)
@@ -60,6 +62,8 @@ function Cart() {
       userDetails.cartItem[existingItemIndex].count--;
     }
     userDetails.total -= item.price;
+    userDetails.taxes = Number(0.18 * userDetails.total).toFixed(2);
+    userDetails.estimatedTotal = userDetails.total + userDetails.taxes
     console.log(userDetails.total, "total added inside decrement function")
     axios
       .put(`${devEnv ? REACT_APP_DEV_URL_C : REACT_APP_PROD_URL_C}/${userDetails.id}`, userDetails)
@@ -106,15 +110,15 @@ function Cart() {
               </div>
               <div className="row">
                 <div className="col">Shipping</div>
-                <div className="col text-end">Calculated at checkout</div>
+                <div className="col text-end">Rs.2000</div>
               </div>
               <div className="row">
                 <div className="col">Taxes</div>
-                <div className="col text-end">Calculated at checkout</div>
+                <div className="col text-end">Rs. {userDetails.taxes}</div>
               </div>
               <div className="row">
-                <div className="col">Estimated Total</div>
-                <div className="col text-end">Rs.XXX</div>
+                <div className="col"></div>
+                <div className="col text-end">Rs. {userDetails.estimatedTotal}</div>
               </div>
               <button type="button" className="btn btn-danger w-100">Check Out</button>
             </div>

@@ -115,6 +115,8 @@ function ProductsPage() {
       toast('1 Item got added to cart');
       console.log("106")
       concernedUser.total += item.price;
+      concernedUser.taxes = Number(0.18 * concernedUser.total).toFixed(2);
+      concernedUser.estimatedTotal = concernedUser.total + concernedUser.taxes
       console.log(concernedUser.total, "total added")
 
       axios

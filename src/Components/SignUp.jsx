@@ -6,6 +6,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 function SignUp() {
+  const userName = useRef();
   const userEmail = useRef();
   const userPassword = useRef();
   const { setCartItemsList } = useContext(StoreList)
@@ -47,11 +48,14 @@ function SignUp() {
       toast.error("Username or email is already registered");
     } else {
       const newCredential = {
+        Name: userName.current.value,
         Email: userEmail.current.value,
         Password: userPassword.current.value,
         cartItem: [],
         wishListItem: [],
-        total: 0
+        total: 0,
+        taxes: 0,
+        estimatedTotal: 0
       }
       axios
         .post(url, newCredential)
@@ -68,9 +72,17 @@ function SignUp() {
   }}>
     <ToastContainer />
     <form onSubmit={(event) => addUser(event)}>
-      <h1 className="h3 mb-3 fw-normal">Please sign in</h1>
+      <h1 className="h3 mb-3 fw-normal">Please sign up</h1>
 
-      <div className="form-floating">
+      <div className="form-floating mb-4">
+        <input type="name" className="form-control" id="floatingInput" placeholder="name" style={{
+          marginBottom: "-1px",
+          borderBottomRightRadius: "0px",
+          borderBottomLeftRadius: "0px"
+        }} ref={userName} />
+        <label htmlFor="floatingInput">Name</label>
+      </div>
+      <div className="form-floating mb-4">
         <input type="email" className="form-control" id="floatingInput" placeholder="name@example.com" style={{
           marginBottom: "-1px",
           borderBottomRightRadius: "0px",
@@ -78,7 +90,7 @@ function SignUp() {
         }} ref={userEmail} />
         <label htmlFor="floatingInput">Email address</label>
       </div>
-      <div className="form-floating">
+      <div className="form-floating mb-4">
         <input type="password" className="form-control" id="floatingPassword" placeholder="Password" style={{
           marginBottom: "10px",
           borderTopLeftRadius: "0px",
