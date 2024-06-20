@@ -1,0 +1,917 @@
+{
+  "clients": [
+    {
+      "id": "dcb9",
+      "Email": "JaiSriGanesh@gmail.com",
+      "Password": "JaiSriGanesh@12345",
+      "cartItem": [
+        {
+          "id": "3",
+          "title": "Canopy Bed",
+          "description": "Metal frame with four-poster canopy and sheer curtains.",
+          "price": 12990,
+          "category": "Bed",
+          "image": "bed3.jpg",
+          "offeredPrice": "NA",
+          "wishlist": false,
+          "count": 2
+        },
+        {
+          "id": "27",
+          "title": "Outdoor Sofa Set",
+          "description": "Modular outdoor sofa set with weather-resistant cushions.",
+          "price": 23990,
+          "category": "Sofa",
+          "image": "sofa7.jpg",
+          "offeredPrice": "NA",
+          "wishlist": false,
+          "count": 1
+        },
+        {
+          "id": "22",
+          "title": "Mid-Century Modern Sofa",
+          "description": "Three-seater sofa with wooden legs and velvet upholstery.",
+          "price": 9990,
+          "category": "Sofa",
+          "image": "sofa2.jpg",
+          "offeredPrice": 8990,
+          "wishlist": false,
+          "count": 4
+        },
+        {
+          "id": "39",
+          "title": "Round Coffee Table",
+          "description": "Round coffee table with wooden base and marble top.",
+          "price": 4990,
+          "category": "Table",
+          "image": "table2.jpg",
+          "offeredPrice": "NA",
+          "wishlist": false,
+          "count": 2
+        },
+        {
+          "id": "33",
+          "title": "Industrial Bar Stool",
+          "description": "Bar stool with metal frame and adjustable height.",
+          "price": 1990,
+          "category": "Chair",
+          "image": "chair3.jpg",
+          "offeredPrice": "NA",
+          "wishlist": false,
+          "count": 1
+        }
+      ],
+      "wishListItem": [],
+      "total": 101900
+    },
+    {
+      "id": "d0aa",
+      "Email": "dfgb@defgb.in",
+      "Password": "fghF@2345678",
+      "cartItem": [
+        {
+          "id": "2",
+          "title": "Traditional Sleigh Bed",
+          "description": "Classic wooden frame with curved headboard and footboard.",
+          "price": 8990,
+          "category": "Bed",
+          "image": "bed2.jpg",
+          "offeredPrice": 7990,
+          "wishlist": false,
+          "count": 1
+        }
+      ],
+      "wishListItem": [],
+      "total": 8990
+    }
+  ],
+  "categories": [
+    {
+      "variety": "Bed",
+      "image": "Bed.jpg",
+      "id": "32dc"
+    },
+    {
+      "variety": "Sofa",
+      "image": "Sofa.jpg",
+      "id": "b885"
+    },
+    {
+      "variety": "Table",
+      "image": "Table.jpg",
+      "id": "02a2"
+    },
+    {
+      "variety": "Chair",
+      "image": "Chair.jpg",
+      "id": "4bf7"
+    },
+    {
+      "variety": "Offers",
+      "image": "Offers.jpg",
+      "id": "35d2"
+    }
+  ],
+  "details": [
+    {
+      "id": "1",
+      "title": "Modern Platform Bed",
+      "description": "Sleek design with upholstered headboard.",
+      "price": 5990,
+      "category": "Bed",
+      "image": "bed1.jpg",
+      "offeredPrice": "NA",
+      "wishlist": false
+    },
+    {
+      "id": "2",
+      "title": "Traditional Sleigh Bed",
+      "description": "Classic wooden frame with curved headboard and footboard.",
+      "price": 8990,
+      "category": "Bed",
+      "image": "bed2.jpg",
+      "offeredPrice": 7990,
+      "wishlist": false
+    },
+    {
+      "id": "3",
+      "title": "Canopy Bed",
+      "description": "Metal frame with four-poster canopy and sheer curtains.",
+      "price": 12990,
+      "category": "Bed",
+      "image": "bed3.jpg",
+      "offeredPrice": "NA",
+      "wishlist": false
+    },
+    {
+      "id": "4",
+      "title": "Mid-Century Modern Bed",
+      "description": "Walnut wood frame with angled legs and minimalist design.",
+      "price": 7990,
+      "category": "Bed",
+      "image": "bed4.jpg",
+      "offeredPrice": 6990,
+      "wishlist": false
+    },
+    {
+      "id": "5",
+      "title": "Upholstered Storage Bed",
+      "description": "Fabric upholstery with built-in drawers for storage.",
+      "price": 10990,
+      "category": "Bed",
+      "image": "bed5.jpg",
+      "offeredPrice": "NA",
+      "wishlist": false
+    },
+    {
+      "id": "6",
+      "title": "Adjustable Bed",
+      "description": "Remote-controlled adjustable base with massage features.",
+      "price": 19990,
+      "category": "Bed",
+      "image": "bed6.jpg",
+      "offeredPrice": 17990,
+      "wishlist": false
+    },
+    {
+      "id": "7",
+      "title": "Rustic Reclaimed Wood Bed",
+      "description": "Barn door detailing with weathered wood finish.",
+      "price": 14990,
+      "category": "Bed",
+      "image": "bed7.jpg",
+      "offeredPrice": "NA",
+      "wishlist": false
+    },
+    {
+      "id": "8",
+      "title": "French Provincial Bed",
+      "description": "Carved wooden frame with ornate detailing and floral upholstery.",
+      "price": 16990,
+      "category": "Bed",
+      "image": "bed8.jpg",
+      "offeredPrice": 14990,
+      "wishlist": false
+    },
+    {
+      "id": "9",
+      "title": "Floating Bed",
+      "description": "Modern design with floating illusion and LED lighting.",
+      "price": 22990,
+      "category": "Bed",
+      "image": "bed9.jpg",
+      "offeredPrice": "NA",
+      "wishlist": false
+    },
+    {
+      "id": "10",
+      "title": "Daybed with Trundle",
+      "description": "Twin-size daybed with pull-out trundle for additional sleeping space.",
+      "price": 7990,
+      "category": "Bed",
+      "image": "bed10.jpg",
+      "offeredPrice": 6990,
+      "wishlist": false
+    },
+    {
+      "id": "11",
+      "title": "Farmhouse Style Bed",
+      "description": "Distressed wood frame with crossbeam details.",
+      "price": 8990,
+      "category": "Bed",
+      "image": "bed11.jpg",
+      "offeredPrice": "NA",
+      "wishlist": false
+    },
+    {
+      "id": "12",
+      "title": "Scandinavian Bed",
+      "description": "Minimalist design with natural wood finish and tapered legs.",
+      "price": 6990,
+      "category": "Bed",
+      "image": "bed12.jpg",
+      "offeredPrice": 5990,
+      "wishlist": false
+    },
+    {
+      "id": "13",
+      "title": "Luxurious Poster Bed",
+      "description": "Four-poster bed with canopy and velvet upholstery.",
+      "price": 29990,
+      "category": "Bed",
+      "image": "bed13.jpg",
+      "offeredPrice": "NA",
+      "wishlist": false
+    },
+    {
+      "id": "14",
+      "title": "Metal Bed Frame",
+      "description": "Industrial-style metal frame with vintage finish.",
+      "price": 4990,
+      "category": "Bed",
+      "image": "bed14.jpg",
+      "offeredPrice": 3990,
+      "wishlist": false
+    },
+    {
+      "id": "15",
+      "title": "Japanese Tatami Bed",
+      "description": "Low-profile design with tatami mat support.",
+      "price": 8990,
+      "category": "Bed",
+      "image": "bed15.jpg",
+      "offeredPrice": "NA",
+      "wishlist": false
+    },
+    {
+      "id": "16",
+      "title": "Sleigh Bed with Storage",
+      "description": "Upholstered sleigh bed with storage drawers.",
+      "price": 11990,
+      "category": "Bed",
+      "image": "bed16.jpg",
+      "offeredPrice": 10990,
+      "wishlist": false
+    },
+    {
+      "id": "17",
+      "title": "Folding Guest Bed",
+      "description": "Foldable bed with memory foam mattress for guests.",
+      "price": 2990,
+      "category": "Bed",
+      "image": "bed17.jpg",
+      "offeredPrice": "NA",
+      "wishlist": false
+    },
+    {
+      "id": "18",
+      "title": "Industrial Loft Bed",
+      "description": "Loft bed with metal frame and built-in desk.",
+      "price": 13990,
+      "category": "Bed",
+      "image": "bed18.jpg",
+      "offeredPrice": 12990,
+      "wishlist": false
+    },
+    {
+      "id": "19",
+      "title": "Outdoor Daybed",
+      "description": "Rattan daybed with weather-resistant cushions.",
+      "price": 15990,
+      "category": "Bed",
+      "image": "bed19.jpg",
+      "offeredPrice": "NA",
+      "wishlist": false
+    },
+    {
+      "id": "20",
+      "title": "Murphy Bed",
+      "description": "Wall-mounted bed that folds into a cabinet.",
+      "price": 18990,
+      "category": "Bed",
+      "image": "bed20.jpg",
+      "offeredPrice": 17990,
+      "wishlist": false
+    },
+    {
+      "id": "21",
+      "title": "Modern Sectional Sofa",
+      "description": "L-shaped sectional sofa with leather upholstery.",
+      "price": 12990,
+      "category": "Sofa",
+      "image": "sofa1.jpg",
+      "offeredPrice": "NA",
+      "wishlist": false
+    },
+    {
+      "id": "22",
+      "title": "Mid-Century Modern Sofa",
+      "description": "Three-seater sofa with wooden legs and velvet upholstery.",
+      "price": 9990,
+      "category": "Sofa",
+      "image": "sofa2.jpg",
+      "offeredPrice": 8990,
+      "wishlist": false
+    },
+    {
+      "id": "23",
+      "title": "Contemporary Loveseat",
+      "description": "Compact loveseat with fabric upholstery.",
+      "price": 6990,
+      "category": "Sofa",
+      "image": "sofa3.jpg",
+      "offeredPrice": "NA",
+      "wishlist": false
+    },
+    {
+      "id": "24",
+      "title": "Leather Recliner Sofa",
+      "description": "Reclining sofa with genuine leather upholstery.",
+      "price": 15990,
+      "category": "Sofa",
+      "image": "sofa4.jpg",
+      "offeredPrice": 13990,
+      "wishlist": false
+    },
+    {
+      "id": "25",
+      "title": "Velvet Chesterfield Sofa",
+      "description": "Classic Chesterfield sofa with velvet upholstery.",
+      "price": 17990,
+      "category": "Sofa",
+      "image": "sofa5.jpg",
+      "offeredPrice": "NA",
+      "wishlist": false
+    },
+    {
+      "id": "26",
+      "title": "Chaise Lounge",
+      "description": "Upholstered chaise lounge with tufted detailing.",
+      "price": 8990,
+      "category": "Sofa",
+      "image": "sofa6.jpg",
+      "offeredPrice": 7990,
+      "wishlist": false
+    },
+    {
+      "id": "27",
+      "title": "Outdoor Sofa Set",
+      "description": "Modular outdoor sofa set with weather-resistant cushions.",
+      "price": 23990,
+      "category": "Sofa",
+      "image": "sofa7.jpg",
+      "offeredPrice": "NA",
+      "wishlist": false
+    },
+    {
+      "id": "28",
+      "title": "Sleeper Sofa",
+      "description": "Sofa with pull-out sleeper mechanism and memory foam mattress.",
+      "price": 12990,
+      "category": "Sofa",
+      "image": "sofa8.jpg",
+      "offeredPrice": 11990,
+      "wishlist": false
+    },
+    {
+      "id": "29",
+      "title": "Sectional Sofa with Ottoman",
+      "description": "Sectional sofa set with ottoman and microfiber upholstery.",
+      "price": 14990,
+      "category": "Sofa",
+      "image": "sofa9.jpg",
+      "offeredPrice": "NA",
+      "wishlist": false
+    },
+    {
+      "id": "30",
+      "title": "Tufted Fabric Sofa",
+      "description": "Tufted sofa with fabric upholstery and wooden legs.",
+      "price": 10990,
+      "category": "Sofa",
+      "image": "sofa10.jpg",
+      "offeredPrice": 9990,
+      "wishlist": false
+    },
+    {
+      "id": "31",
+      "title": "Acrylic Dining Chair",
+      "description": "Modern dining chair with clear acrylic seat and metal legs.",
+      "price": 1490,
+      "category": "Chair",
+      "image": "chair1.jpg",
+      "offeredPrice": "NA",
+      "wishlist": false
+    },
+    {
+      "id": "32",
+      "title": "Upholstered Armchair",
+      "description": "Armchair with fabric upholstery and wooden legs.",
+      "price": 3990,
+      "category": "Chair",
+      "image": "chair2.jpg",
+      "offeredPrice": 3490,
+      "wishlist": false
+    },
+    {
+      "id": "33",
+      "title": "Industrial Bar Stool",
+      "description": "Bar stool with metal frame and adjustable height.",
+      "price": 1990,
+      "category": "Chair",
+      "image": "chair3.jpg",
+      "offeredPrice": "NA",
+      "wishlist": false
+    },
+    {
+      "id": "34",
+      "title": "Scandinavian Dining Chair",
+      "description": "Minimalist dining chair with wooden frame and white seat.",
+      "price": 1790,
+      "category": "Chair",
+      "image": "chair4.jpg",
+      "offeredPrice": 1590,
+      "wishlist": false
+    },
+    {
+      "id": "35",
+      "title": "Gaming Chair",
+      "description": "Ergonomic gaming chair with lumbar support and adjustable armrests.",
+      "price": 2490,
+      "category": "Chair",
+      "image": "chair5.jpg",
+      "offeredPrice": "NA",
+      "wishlist": false
+    },
+    {
+      "id": "36",
+      "title": "Rocking Chair",
+      "description": "Traditional rocking chair with wooden frame and upholstered seat.",
+      "price": 1990,
+      "category": "Chair",
+      "image": "chair6.jpg",
+      "offeredPrice": 1790,
+      "wishlist": false
+    },
+    {
+      "id": "37",
+      "title": "Modern Office Chair",
+      "description": "Adjustable office chair with mesh backrest and ergonomic design.",
+      "price": 3990,
+      "category": "Chair",
+      "image": "chair7.jpg",
+      "offeredPrice": "NA",
+      "wishlist": false
+    },
+    {
+      "id": "38",
+      "title": "Modern Dining Table",
+      "description": "Rectangular dining table with glass top and metal legs.",
+      "price": 8990,
+      "category": "Table",
+      "image": "table1.jpg",
+      "offeredPrice": 7990,
+      "wishlist": false
+    },
+    {
+      "id": "39",
+      "title": "Round Coffee Table",
+      "description": "Round coffee table with wooden base and marble top.",
+      "price": 4990,
+      "category": "Table",
+      "image": "table2.jpg",
+      "offeredPrice": "NA",
+      "wishlist": false
+    },
+    {
+      "id": "40",
+      "title": "Extendable Dining Table",
+      "description": "Wooden dining table with extension leaf for extra seating.",
+      "price": 12990,
+      "category": "Table",
+      "image": "table3.jpg",
+      "offeredPrice": 11990,
+      "wishlist": false
+    },
+    {
+      "id": "41",
+      "title": "Farmhouse Dining Table",
+      "description": "Rustic farmhouse dining table with distressed finish.",
+      "price": 10990,
+      "category": "Table",
+      "image": "table4.jpg",
+      "offeredPrice": "NA",
+      "wishlist": false
+    },
+    {
+      "id": "42",
+      "title": "Marble Console Table",
+      "description": "Console table with marble top and metal frame.",
+      "price": 7990,
+      "category": "Table",
+      "image": "table5.jpg",
+      "offeredPrice": 6990,
+      "wishlist": false
+    },
+    {
+      "id": "43",
+      "title": "Industrial Bar Table",
+      "description": "Bar-height table with reclaimed wood top and metal legs.",
+      "price": 6990,
+      "category": "Table",
+      "image": "table6.jpg",
+      "offeredPrice": "NA",
+      "wishlist": false
+    },
+    {
+      "id": "44",
+      "title": "Nesting Side Tables",
+      "description": "Set of nesting side tables with glass tops and metal frames.",
+      "price": 2490,
+      "category": "Table",
+      "image": "table7.jpg",
+      "offeredPrice": 1990,
+      "wishlist": false
+    },
+    {
+      "id": "45",
+      "title": "Outdoor Dining Set",
+      "description": "Outdoor dining set with table and chairs, weather-resistant materials.",
+      "price": 15990,
+      "category": "Table",
+      "image": "table8.jpg",
+      "offeredPrice": "NA",
+      "wishlist": false
+    },
+    {
+      "id": "46",
+      "title": "Folding Patio Table",
+      "description": "Folding patio table with wood-like finish, suitable for outdoor use.",
+      "price": 2990,
+      "category": "Table",
+      "image": "table9.jpg",
+      "offeredPrice": 2490,
+      "wishlist": false
+    },
+    {
+      "id": "47",
+      "title": "Entryway Console Table",
+      "description": "Slim console table for entryways, with drawer and shelf.",
+      "price": 3990,
+      "category": "Table",
+      "image": "table10.jpg",
+      "offeredPrice": "NA",
+      "wishlist": false
+    },
+    {
+      "id": "48",
+      "title": "Modern Coffee Table",
+      "description": "Rectangular coffee table with sleek design and metal legs.",
+      "price": 5990,
+      "category": "Table",
+      "image": "table11.jpg",
+      "offeredPrice": 5490,
+      "wishlist": false
+    },
+    {
+      "id": "49",
+      "title": "Glass Top Dining Table",
+      "description": "Dining table with tempered glass top and chrome legs.",
+      "price": 7990,
+      "category": "Table",
+      "image": "table12.jpg",
+      "offeredPrice": "NA",
+      "wishlist": false
+    },
+    {
+      "id": "50",
+      "title": "Rustic End Table",
+      "description": "End table with rustic wood finish and metal accents.",
+      "price": 2490,
+      "category": "Table",
+      "image": "table13.jpg",
+      "offeredPrice": 1990,
+      "wishlist": false
+    },
+    {
+      "id": "51",
+      "title": "Contemporary Bar Table",
+      "description": "Bar table with sleek lines and high-gloss finish.",
+      "price": 4990,
+      "category": "Table",
+      "image": "table14.jpg",
+      "offeredPrice": "NA",
+      "wishlist": false
+    },
+    {
+      "id": "52",
+      "title": "Vintage Bedside Table",
+      "description": "Bedside table with vintage look and drawer for storage.",
+      "price": 1490,
+      "category": "Table",
+      "image": "table15.jpg",
+      "offeredPrice": 1290,
+      "wishlist": false
+    },
+    {
+      "id": "53",
+      "title": "Modern Writing Desk",
+      "description": "Writing desk with minimalist design and storage compartments.",
+      "price": 2990,
+      "category": "Table",
+      "image": "table16.jpg",
+      "offeredPrice": "NA",
+      "wishlist": false
+    },
+    {
+      "id": "54",
+      "title": "Wooden Study Table",
+      "description": "Study table with wooden top and metal legs.",
+      "price": 1990,
+      "category": "Table",
+      "image": "table17.jpg",
+      "offeredPrice": 1790,
+      "wishlist": false
+    },
+    {
+      "id": "55",
+      "title": "Pedestal Dining Table",
+      "description": "Round pedestal dining table with wood grain finish.",
+      "price": 6990,
+      "category": "Table",
+      "image": "table18.jpg",
+      "offeredPrice": "NA",
+      "wishlist": false
+    },
+    {
+      "id": "56",
+      "title": "Adjustable Height Table",
+      "description": "Table with adjustable height mechanism, suitable for various uses.",
+      "price": 3990,
+      "category": "Table",
+      "image": "table19.jpg",
+      "offeredPrice": 3490,
+      "wishlist": false
+    },
+    {
+      "id": "57",
+      "title": "Mid-Century Modern Console",
+      "description": "Console table with mid-century modern design and drawer.",
+      "price": 5490,
+      "category": "Table",
+      "image": "table20.jpg",
+      "offeredPrice": "NA",
+      "wishlist": false
+    },
+    {
+      "id": "58",
+      "title": "Eames Style Lounge Chair",
+      "description": "Iconic lounge chair with leather upholstery and walnut veneer.",
+      "price": 15990,
+      "category": "Chair",
+      "image": "chair8.jpg",
+      "offeredPrice": "NA",
+      "wishlist": false
+    },
+    {
+      "id": "59",
+      "title": "Wingback Armchair",
+      "description": "Classic wingback armchair with button tufted back and nailhead trim.",
+      "price": 8990,
+      "category": "Chair",
+      "image": "chair9.jpg",
+      "offeredPrice": 7990,
+      "wishlist": false
+    },
+    {
+      "id": "60",
+      "title": "Outdoor Lounge Chair",
+      "description": "Weather-resistant outdoor lounge chair with adjustable recline.",
+      "price": 6990,
+      "category": "Chair",
+      "image": "chair10.jpg",
+      "offeredPrice": "NA",
+      "wishlist": false
+    },
+    {
+      "id": "61",
+      "title": "Industrial Dining Chair",
+      "description": "Metal dining chair with distressed finish and cross-back design.",
+      "price": 2490,
+      "category": "Chair",
+      "image": "chair11.jpg",
+      "offeredPrice": 1990,
+      "wishlist": false
+    },
+    {
+      "id": "62",
+      "title": "Mid-Century Modern Armchair",
+      "description": "Armchair with wooden frame, angled legs, and fabric upholstery.",
+      "price": 5990,
+      "category": "Chair",
+      "image": "chair12.jpg",
+      "offeredPrice": "NA",
+      "wishlist": false
+    },
+    {
+      "id": "63",
+      "title": "Velvet Accent Chair",
+      "description": "Accent chair with velvet upholstery and gold-finished legs.",
+      "price": 4990,
+      "category": "Chair",
+      "image": "chair13.jpg",
+      "offeredPrice": 4490,
+      "wishlist": false
+    },
+    {
+      "id": "64",
+      "title": "Acrylic Ghost Chair",
+      "description": "Transparent acrylic chair with sleek modern design.",
+      "price": 2990,
+      "category": "Chair",
+      "image": "chair14.jpg",
+      "offeredPrice": "NA",
+      "wishlist": false
+    },
+    {
+      "id": "65",
+      "title": "Rattan Dining Chair",
+      "description": "Natural rattan dining chair with cushioned seat.",
+      "price": 1990,
+      "category": "Chair",
+      "image": "chair15.jpg",
+      "offeredPrice": 1790,
+      "wishlist": false
+    },
+    {
+      "id": "66",
+      "title": "Leather Club Chair",
+      "description": "Classic leather club chair with button tufted back.",
+      "price": 8990,
+      "category": "Chair",
+      "image": "chair16.jpg",
+      "offeredPrice": "NA",
+      "wishlist": false
+    },
+    {
+      "id": "67",
+      "title": "Ergonomic Office Chair",
+      "description": "High-back ergonomic office chair with lumbar support.",
+      "price": 4490,
+      "category": "Chair",
+      "image": "chair17.jpg",
+      "offeredPrice": 3990,
+      "wishlist": false
+    },
+    {
+      "id": "68",
+      "title": "Modern Bar Chair",
+      "description": "Bar-height chair with molded plastic seat and metal legs.",
+      "price": 1490,
+      "category": "Chair",
+      "image": "chair18.jpg",
+      "offeredPrice": "NA",
+      "wishlist": false
+    },
+    {
+      "id": "69",
+      "title": "Upholstered Dining Armchair",
+      "description": "Armchair with upholstered seat and back, and wooden legs.",
+      "price": 3490,
+      "category": "Chair",
+      "image": "chair19.jpg",
+      "offeredPrice": 2990,
+      "wishlist": false
+    },
+    {
+      "id": "70",
+      "title": "Outdoor Folding Chair",
+      "description": "Foldable outdoor chair with weather-resistant materials.",
+      "price": 1490,
+      "category": "Chair",
+      "image": "chair20.jpg",
+      "offeredPrice": "NA",
+      "wishlist": false
+    },
+    {
+      "id": "71",
+      "title": "Modern L-Shaped Sofa",
+      "description": "Modern L-shaped sofa with adjustable headrests and plush fabric upholstery.",
+      "price": 62990,
+      "category": "Sofa",
+      "image": "sofa11.jpg",
+      "offeredPrice": "NA",
+      "wishlist": false
+    },
+    {
+      "id": "72",
+      "title": "Convertible Sleeper Sofa",
+      "description": "Convertible sleeper sofa with split-back design and linen upholstery.",
+      "price": 54990,
+      "category": "Sofa",
+      "image": "sofa12.jpg",
+      "offeredPrice": 50990,
+      "wishlist": false
+    },
+    {
+      "id": "73",
+      "title": "Linen Upholstered Sofa",
+      "description": "Linen upholstered sofa with wooden legs and removable cushions.",
+      "price": 49990,
+      "category": "Sofa",
+      "image": "sofa13.jpg",
+      "offeredPrice": "NA",
+      "wishlist": false
+    },
+    {
+      "id": "74",
+      "title": "Velvet Sofa with Pillows",
+      "description": "Velvet sofa with throw pillows and deep seating.",
+      "price": 53990,
+      "category": "Sofa",
+      "image": "sofa14.jpg",
+      "offeredPrice": 49990,
+      "wishlist": false
+    },
+    {
+      "id": "75",
+      "title": "Sectional Sofa with Ottoman",
+      "description": "Sectional sofa with ottoman and microfiber upholstery.",
+      "price": 67990,
+      "category": "Sofa",
+      "image": "sofa15.jpg",
+      "offeredPrice": "NA",
+      "wishlist": false
+    },
+    {
+      "id": "76",
+      "title": "Leather Chesterfield Sofa",
+      "description": "Leather Chesterfield sofa with rolled arms and tufted back.",
+      "price": 67990,
+      "category": "Sofa",
+      "image": "sofa16.jpg",
+      "offeredPrice": 64990,
+      "wishlist": false
+    },
+    {
+      "id": "77",
+      "title": "L-Shaped Sectional Sofa",
+      "description": "L-shaped sectional sofa with chaise lounge and linen upholstery.",
+      "price": 69990,
+      "category": "Sofa",
+      "image": "sofa17.jpg",
+      "offeredPrice": "NA",
+      "wishlist": false
+    },
+    {
+      "id": "78",
+      "title": "Microfiber Reclining Sofa",
+      "description": "Microfiber reclining sofa with padded arms and drop-down console.",
+      "price": 57990,
+      "category": "Sofa",
+      "image": "sofa18.jpg",
+      "offeredPrice": 54990,
+      "wishlist": false
+    },
+    {
+      "id": "79",
+      "title": "Tufted Velvet Sofa",
+      "description": "Tufted velvet sofa with rolled arms and solid wood legs.",
+      "price": 62990,
+      "category": "Sofa",
+      "image": "sofa19.jpg",
+      "offeredPrice": "NA",
+      "wishlist": false
+    },
+    {
+      "id": "80",
+      "title": "Sofa Bed with Storage",
+      "description": "Sofa bed with pull-out mattress and storage compartment.",
+      "price": 49990,
+      "category": "Sofa",
+      "image": "sofa20.jpg",
+      "offeredPrice": 46990,
+      "wishlist": false
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+.productsPage {
+  .products {
+    /* .row {
+      display: flex;
+      flex-wrap: wrap;
+    } */
+
+    /* .col-lg-3 {
+      display: flex;
+      flex: 1 0 21%;
+      margin-bottom: 1rem;
+    } */
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* .card-body {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .card-body .card-text {
+      flex-grow: 1;
+    } */
+
+    .card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: auto;
+      /* Pushes the footer to the bottom */
+    }
+
+    /* .card-img-top {
+      height: auto;
+      max-width: 100%;
+      object-fit: cover;
+    } */
+  }
+}
