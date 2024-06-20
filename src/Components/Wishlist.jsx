@@ -9,10 +9,15 @@ function Wishlist() {
   const { setCartItemsList } = useContext(StoreList)
   const [wishlistItems, setWishlistItems] = useState([]);
   const [userDetails, setUserDetails] = useState([]);
+
+  const devEnv = process.env.NODE_ENV !== "production";
+  const { REACT_APP_DEV_URL_C, REACT_APP_PROD_URL_C } = process.env;
+  const url = `${devEnv ? REACT_APP_DEV_URL_C : REACT_APP_PROD_URL_C}`;
+
   const getUsers = () => {
     console.log(wishlistItems, "check it here")
     if (sessionStorage.email !== "" && sessionStorage.email !== undefined && sessionStorage.email !== "undefined") {
-      fetch("http://localhost:8080/clients")
+      fetch(url)
         .then((response) => response.json())
         .then((allDet) => {
           const concernedUser = allDet.find(item => item.Email == sessionStorage.email)
@@ -49,15 +54,16 @@ function Wishlist() {
     userDetails.total += item.price;
     console.log(userDetails.total, "total added")
     toast("1 item got added")
+
     axios
-      .put(`http://localhost:8080/clients/${userDetails.id}`, userDetails)
+      .put(`${devEnv ? REACT_APP_DEV_URL_C : REACT_APP_PROD_URL_C}/${userDetails.id}`, userDetails)
       .then((response) => setCartItemsList(response.data.cartItem))
   }
   const removeFromWishlist = (item) => {
     const existingItemIndex = userDetails.wishListItem.findIndex(wishListItem => wishListItem.id === item.id);
     userDetails.wishListItem.splice(existingItemIndex, 1);
     axios
-      .put(`http://localhost:8080/clients/${userDetails.id}`, userDetails)
+      .put(`${devEnv ? REACT_APP_DEV_URL_C : REACT_APP_PROD_URL_C}/${userDetails.id}`, userDetails)
       .then((response) => setWishlistItems(response.data.wishListItem))
   };
   return <div className="d-flex align-items-center py-4 bg-body-tertiary">

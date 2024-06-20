@@ -14,7 +14,7 @@ function Cart() {
   const getUsers = () => {
     console.log(cartItemsList, "check it here")
     if (sessionStorage.email !== "" && sessionStorage.email !== undefined && sessionStorage.email !== "undefined") {
-      fetch("http://localhost:8080/clients")
+      fetch(url)
         .then((response) => response.json())
         .then((allDet) => {
           const concernedUser = allDet.find(item => item.Email == sessionStorage.email)
@@ -47,7 +47,7 @@ function Cart() {
     userDetails.total += item.price;
     console.log(userDetails.total, "total added inside increment function")
     axios
-      .put(`http://localhost:8080/clients/${userDetails.id}`, userDetails)
+      .put(`${devEnv ? REACT_APP_DEV_URL_C : REACT_APP_PROD_URL_C}/${userDetails.id}`, userDetails)
       .then((response) => setCartItemsList(response.data.cartItem))
   };
   const decrementFunc = (item) => {
@@ -61,7 +61,7 @@ function Cart() {
     userDetails.total -= item.price;
     console.log(userDetails.total, "total added inside decrement function")
     axios
-      .put(`http://localhost:8080/clients/${userDetails.id}`, userDetails)
+      .put(`${devEnv ? REACT_APP_DEV_URL_C : REACT_APP_PROD_URL_C}/${userDetails.id}`, userDetails)
       .then((response) => setCartItemsList(response.data.cartItem))
   };
   return <div className="d-flex align-items-center py-4 bg-body-tertiary">

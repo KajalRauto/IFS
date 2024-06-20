@@ -3,9 +3,12 @@ import { Link } from "react-router-dom";
 
 function Products() {
   const [categories, setCategories] = useState([]);
+  const devEnv = process.env.NODE_ENV !== "production";
+  const { REACT_APP_DEV_URL_CA, REACT_APP_PROD_URL_CA } = process.env;
 
+  const url = `${devEnv ? REACT_APP_DEV_URL_CA : REACT_APP_PROD_URL_CA}`;
   const getDet = () => {
-    fetch("http://localhost:8080/categories")
+    fetch(url)
       .then((response) => response.json())
       .then((allDet) => setCategories(allDet));
   };

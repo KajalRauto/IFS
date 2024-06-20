@@ -14,16 +14,21 @@ function ProductsPage() {
 
   let user = [],
     details = [];
+  const devEnv = process.env.NODE_ENV !== "production";
+  const { REACT_APP_DEV_URL_C, REACT_APP_PROD_URL_C, REACT_APP_DEV_URL_D, REACT_APP_PROD_URL_D } = process.env;
+
+  const urlDet = `${devEnv ? REACT_APP_DEV_URL_D : REACT_APP_PROD_URL_D}`;
+  const urlUsers = `${devEnv ? REACT_APP_DEV_URL_C : REACT_APP_PROD_URL_C}`;
 
   const getDet = () => {
     console.log("hi kajal here")
-    fetch("http://localhost:8080/details")
+    fetch(urlDet)
       .then((response) => response.json())
       .then((allDet) => saveProductsList(allDet));
   };
 
   const getUsers = () => {
-    fetch("http://localhost:8080/clients")
+    fetch(urlUsers)
       .then((response) => response.json())
       .then((allDet) => saveUserDetails(allDet));
   };
@@ -111,8 +116,9 @@ function ProductsPage() {
       console.log("106")
       concernedUser.total += item.price;
       console.log(concernedUser.total, "total added")
+
       axios
-        .put(`http://localhost:8080/clients/${concernedUser.id}`, concernedUser)
+        .put(`${devEnv ? REACT_APP_DEV_URL_C : REACT_APP_PROD_URL_C}/${concernedUser.id}`, concernedUser)
         .then((response) => setCartItemsList(response.data.cartItem))
     } else {
       toast('Please SignUp /  Login');
@@ -151,8 +157,9 @@ function ProductsPage() {
       });
       console.log(newData, "details inside add to wishlist");
       setRequiredData(newData)
+
       axios
-        .put(`http://localhost:8080/clients/${concernedUser.id}`, concernedUser)
+        .put(`${devEnv ? REACT_APP_DEV_URL_C : REACT_APP_PROD_URL_C}/${concernedUser.id}`, concernedUser)
       // .then((response) => setRequiredData(details))
     } else {
       toast("Please SignUp /  Login")
@@ -178,7 +185,7 @@ function ProductsPage() {
     console.log(newData, "details inside remove from wishlist");
     setRequiredData(newData)
     axios
-      .put(`http://localhost:8080/clients/${concernedUser.id}`, concernedUser)
+      .put(`${devEnv ? REACT_APP_DEV_URL_C : REACT_APP_PROD_URL_C}/${concernedUser.id}`, concernedUser)
     // .then((response) => setRequiredData(details))
   };
   return <div className="container productsPage my-4">

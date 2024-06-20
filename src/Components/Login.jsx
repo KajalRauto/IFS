@@ -23,11 +23,14 @@ function Login() {
 
   const [clientlist, setclientlist] = useState([]);
   const navigate = useNavigate();
+  const devEnv = process.env.NODE_ENV !== "production";
+  const { REACT_APP_DEV_URL_C, REACT_APP_PROD_URL_C } = process.env;
 
+  const url = `${devEnv ? REACT_APP_DEV_URL_C : REACT_APP_PROD_URL_C}`;
 
   const getClientlist = () => {
     console.log("inside login effect call")
-    fetch("http://localhost:8080/clients")
+    fetch(url)
       .then((response) => response.json())
       .then((allClient) => setclientlist(allClient));
   };

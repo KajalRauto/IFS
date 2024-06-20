@@ -1,43 +1,10 @@
 {
   "clients": [
     {
-      "id": "dcb9",
-      "Email": "JaiSriGanesh@gmail.com",
+      "id": "5f75",
+      "Email": "jaisriganesh@gmail.com",
       "Password": "JaiSriGanesh@12345",
       "cartItem": [
-        {
-          "id": "3",
-          "title": "Canopy Bed",
-          "description": "Metal frame with four-poster canopy and sheer curtains.",
-          "price": 12990,
-          "category": "Bed",
-          "image": "bed3.jpg",
-          "offeredPrice": "NA",
-          "wishlist": false,
-          "count": 2
-        },
-        {
-          "id": "27",
-          "title": "Outdoor Sofa Set",
-          "description": "Modular outdoor sofa set with weather-resistant cushions.",
-          "price": 23990,
-          "category": "Sofa",
-          "image": "sofa7.jpg",
-          "offeredPrice": "NA",
-          "wishlist": false,
-          "count": 1
-        },
-        {
-          "id": "22",
-          "title": "Mid-Century Modern Sofa",
-          "description": "Three-seater sofa with wooden legs and velvet upholstery.",
-          "price": 9990,
-          "category": "Sofa",
-          "image": "sofa2.jpg",
-          "offeredPrice": 8990,
-          "wishlist": false,
-          "count": 4
-        },
         {
           "id": "39",
           "title": "Round Coffee Table",
@@ -50,39 +17,30 @@
           "count": 2
         },
         {
-          "id": "33",
-          "title": "Industrial Bar Stool",
-          "description": "Bar stool with metal frame and adjustable height.",
-          "price": 1990,
-          "category": "Chair",
-          "image": "chair3.jpg",
+          "id": "41",
+          "title": "Farmhouse Dining Table",
+          "description": "Rustic farmhouse dining table with distressed finish.",
+          "price": 10990,
+          "category": "Table",
+          "image": "table4.jpg",
           "offeredPrice": "NA",
           "wishlist": false,
           "count": 1
-        }
-      ],
-      "wishListItem": [],
-      "total": 101900
-    },
-    {
-      "id": "d0aa",
-      "Email": "dfgb@defgb.in",
-      "Password": "fghF@2345678",
-      "cartItem": [
+        },
         {
-          "id": "2",
-          "title": "Traditional Sleigh Bed",
-          "description": "Classic wooden frame with curved headboard and footboard.",
-          "price": 8990,
-          "category": "Bed",
-          "image": "bed2.jpg",
-          "offeredPrice": 7990,
+          "id": "40",
+          "title": "Extendable Dining Table",
+          "description": "Wooden dining table with extension leaf for extra seating.",
+          "price": 12990,
+          "category": "Table",
+          "image": "table3.jpg",
+          "offeredPrice": 11990,
           "wishlist": false,
           "count": 1
         }
       ],
       "wishListItem": [],
-      "total": 8990
+      "total": 33960
     }
   ],
   "categories": [
