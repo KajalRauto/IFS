@@ -7,6 +7,7 @@ function Cart() {
   const [cartItemsList, setCartItemsList] = useState([]);
   const [userDetails, setUserDetails] = useState([]);
   // const [subtotal, setSubTotal] = useState(0);
+
   const devEnv = process.env.NODE_ENV !== "production";
   const { REACT_APP_DEV_URL_C, REACT_APP_PROD_URL_C } = process.env;
 
