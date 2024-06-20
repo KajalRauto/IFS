@@ -11,7 +11,8 @@ function Home() {
         </div>
         <div className="carousel-inner">
           <div className="carousel-item active" style={{ overflow: "hidden" }}>
-            <img src={require("../Resources/banner2_11zon.jpeg")} className="d-block w-100" alt="..." style={{ objectFit: "cover" }} />
+            <Link to="/products" state="Offers">
+              <img src={require("../Resources/banner2_11zon.jpeg")} className="d-block w-100" alt="..." style={{ objectFit: "cover" }} /></Link>
             <div className="container">
               <div className="carousel-caption text-start d-none d-md-block">
                 <h1>Example headline.</h1>
@@ -21,7 +22,8 @@ function Home() {
             </div>
           </div>
           <div className="carousel-item" style={{ overflow: "hidden" }}>
-            <img src={require("../Resources/banner3_11zon.jpeg")} className="d-block w-100" alt="..." style={{ objectFit: "cover" }} />
+            <Link to="/products" state="Offers">
+              <img src={require("../Resources/banner3_11zon.jpeg")} className="d-block w-100" alt="..." style={{ objectFit: "cover" }} /> </Link>
             <div className="container">
               <div className="carousel-caption d-none d-md-block">
                 <h1>Another example headline.</h1>
@@ -31,7 +33,8 @@ function Home() {
             </div>
           </div>
           <div className="carousel-item" style={{ overflow: "hidden" }}>
-            <img src={require("../Resources/banner4_11zon.jpg")} className="d-block w-100" alt="..." style={{ objectFit: "cover" }} />
+            <Link to="/products" state="Offers">
+              <img src={require("../Resources/banner4_11zon.jpg")} className="d-block w-100" alt="..." style={{ objectFit: "cover" }} /></Link>
             <div className="container">
               <div className="carousel-caption text-end d-none d-md-block">
                 <h1>One more for good measure.</h1>
