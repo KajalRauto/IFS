@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 
 function Home() {
   return (
-    <div className="container">
-      <div id="myCarousel" className="carousel slide mb-6" data-bs-ride="carousel">
+    <div className="container pb-4">
+      <div id="myCarousel" className="carousel slide" data-bs-ride="carousel">
         <div className="carousel-indicators">
           <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" className="active" aria-label="Slide 1" aria-current="true"></button>
           <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" className=""></button>
