@@ -1,6 +1,6 @@
 
 function AboutUs() {
-  return <div className="container aboutUs my-4 p-4" style={{ backgroundColor: "#f2f2f2" }}>
+  return <div className="container aboutUs mt-4 p-4" style={{ backgroundColor: "#f2f2f2" }}>
     <h1 className="text-center mb-4">About Us</h1>
     <div className="row row-cols-1 row-cols-sm-3">
       <div className="col mb-4">

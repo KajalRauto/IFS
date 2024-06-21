@@ -19,6 +19,7 @@ function Products() {
 
   return (
     <div className="container products my-4">
+      <h1 className="pb-4 text-center">Products</h1>
       <div className="row row-cols-2 row-cols-sm-3 row-cols-lg-5">
         {categories.map((item, index) => {
           return (
