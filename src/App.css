@@ -8,7 +8,7 @@
   }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1024px) {
   .carousel {
     .carousel-inner {
       .carousel-item {
@@ -18,7 +18,7 @@
   }
 }
 
-@media (min-width: 426px) and (max-width: 768px) {
+@media (min-width: 426px) and (max-width: 769px) {
   .carousel {
     .carousel-inner {
       .carousel-item {
@@ -28,11 +28,11 @@
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 426px) {
   .carousel {
     .carousel-inner {
       .carousel-item {
-        height: 234px;
+        height: 197px;
       }
     }
   }
