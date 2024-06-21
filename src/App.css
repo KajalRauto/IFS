@@ -18,7 +18,7 @@
   }
 }
 
-@media (min-width: 376px) and (max-width: 768px) {
+@media (min-width: 426px) and (max-width: 768px) {
   .carousel {
     .carousel-inner {
       .carousel-item {
@@ -28,7 +28,7 @@
   }
 }
 
-@media (max-width: 376px) {
+@media (max-width: 425px) {
   .carousel {
     .carousel-inner {
       .carousel-item {
